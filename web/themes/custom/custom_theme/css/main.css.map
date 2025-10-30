@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/base/_resets.scss","../scss/base/_typography.scss","../scss/component/_header.scss","../scss/abstract/_variables.scss","../scss/component/_footer.scss"],"names":[],"mappings":"AAAA;EACE;EACA;;;AAEF;EACE;;;AAEF;EACE;EACA;;;ACTF;EACE;;;ACCF;EACE,kBCHU;;;ACEZ;EACE,kBDFU","file":"main.css"}

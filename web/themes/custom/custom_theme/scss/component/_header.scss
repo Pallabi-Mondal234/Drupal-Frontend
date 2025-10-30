@@ -1,0 +1,5 @@
+@use '../abstract/index' as *;
+
+header {
+  background-color: $header-bg;
+}
