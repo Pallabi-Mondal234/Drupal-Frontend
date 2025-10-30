@@ -3,4 +3,3 @@ global:
   css:
     theme:
       css/main.css: { }
-
