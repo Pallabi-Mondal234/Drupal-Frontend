@@ -1,0 +1,19 @@
+uuid: 2b534778-0362-44ce-851c-a104ba881973
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_with_time
+    - node.type.blog
+id: node.blog.field_date_with_time
+field_name: field_date_with_time
+entity_type: node
+bundle: blog
+label: 'Posted On'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

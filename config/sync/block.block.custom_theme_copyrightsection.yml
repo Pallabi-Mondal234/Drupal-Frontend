@@ -1,0 +1,25 @@
+uuid: b09d99c4-a967-428f-8cbe-c514532f421b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ee835faf-c78a-4a72-ae4b-8072caabb7ae'
+  module:
+    - block_content
+  theme:
+    - custom_theme
+id: custom_theme_copyrightsection
+theme: custom_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:ee835faf-c78a-4a72-ae4b-8072caabb7ae'
+settings:
+  id: 'block_content:ee835faf-c78a-4a72-ae4b-8072caabb7ae'
+  label: 'Copyright Section'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

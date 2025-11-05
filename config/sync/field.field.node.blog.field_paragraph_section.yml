@@ -1,0 +1,31 @@
+uuid: 4a408597-cefb-4e2e-aaa9-97e454d73a38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_section
+    - node.type.blog
+    - paragraphs.paragraphs_type.image_section
+  module:
+    - entity_reference_revisions
+id: node.blog.field_paragraph_section
+field_name: field_paragraph_section
+entity_type: node
+bundle: blog
+label: 'Paragraph Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_section: image_section
+    negate: 0
+    target_bundles_drag_drop:
+      image_section:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions
