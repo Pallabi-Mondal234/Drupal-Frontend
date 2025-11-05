@@ -1,0 +1,5 @@
+@use '../abstract/index' as *;
+
+footer {
+  background-color: $footer-bg;
+}
