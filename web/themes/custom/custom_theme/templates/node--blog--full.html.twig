@@ -77,47 +77,49 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 {# Convert the URI into a publically accessible URl using file_url() function. #}
 {% set file_url_path = file_url(file_uri) %}
 {{ attach_library('bootstrap5/node') }}
-<article{{ attributes.addClass(classes) }}>
+<article{{attributes.addClass(classes)}}>
 
-  {{ title_prefix }}
-  {% if label and not page %}
-  <h2 {{ title_attributes }}>
-    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-  </h2>
-  {% endif %}
-  {{ title_suffix }}
-  <div class="blog__post">
-    <div class="blog__post__img">
-      {% if content.field_post_image %}
-      {{ content.field_post_image }}
-      {% endif %}
-    </div>
-    <div class="blog__post__content">
-      {% if content.field_date_with_time %}
-      {{ content.field_date_with_time }}
-      {% endif %}
-      {% if content.body %}
-      {{ content.body }}
-      {% endif %}
-      {% trans %}<h4>Download the file</h4>{% endtrans %}
-      {% if content.field_download_file %}
-      <div class="button-section">
-        <a href="{{ file_url_path }}" class="button" download>Download</a>
-        <a href="{{ file_url_path }}" class="button">Check this file</a>
-      </div>
-      {% endif %}
-    </div>
-  </div>
+	{{ title_prefix }}
+	{% if label and not page %}
+		<h2 {{ title_attributes }}>
+			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+		</h2>
+	{% endif %}
+	{{ title_suffix }}
+	<div class="blog__post">
+		<div class="blog__post__img">
+			{% if content.field_post_image %}
+				{{ content.field_post_image }}
+			{% endif %}
+		</div>
+		<div class="blog__post__content">
+			{% if content.field_date_with_time %}
+				{{ content.field_date_with_time }}
+			{% endif %}
+			{% if content.body %}
+				{{ content.body }}
+			{% endif %}
+			{% trans %}<h4>Download the file</h4>
+			{% endtrans %}
+			{% if content.field_download_file %}
+				<div class="button-section">
+					<a href="{{ file_url_path }}" class="button" download>Download</a>
+					<a href="{{ file_url_path }}" class="button">Check this file</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
 
-  <div class="img-section row py-4">
-    {% trans %}<h2>Related Post</h2>{% endtrans %}
-    {% if content.field_paragraph_section %}
-    {{ content.field_paragraph_section }}
-    {% endif %}
-  </div>
-  <div class="comment-section">
-    {% if content.field_comment_section %}
-    {{ content.field_comment_section| without(subject) }}
-    {% endif %}
-  </div>
-  </article>
+	<div class="img-section row py-4">
+		{% trans %}<h2>Related Post</h2>
+		{% endtrans %}
+		{% if content.field_paragraph_section %}
+			{{ content.field_paragraph_section }}
+		{% endif %}
+	</div>
+	<div class="comment-section">
+		{% if content.field_comment_section %}
+			{{ content.field_comment_section| without(subject) }}
+		{% endif %}
+	</div>
+</article>
