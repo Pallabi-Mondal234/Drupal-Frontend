@@ -8,6 +8,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - paragraphs_type_permissions
     - search
     - system
 _core:
@@ -20,5 +21,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'post comments'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view paragraph content image_section'

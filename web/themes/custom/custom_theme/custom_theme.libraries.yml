@@ -3,3 +3,8 @@ global:
   css:
     theme:
       css/main.css: { }
+
+blog:
+  css:
+    theme:
+      css/blog.css: { }

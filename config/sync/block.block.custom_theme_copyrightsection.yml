@@ -10,6 +10,7 @@ dependencies:
     - custom_theme
 id: custom_theme_copyrightsection
 theme: custom_theme
+region: footer
 region: footer_bottom
 weight: 0
 provider: null
