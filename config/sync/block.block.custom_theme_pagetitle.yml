@@ -2,6 +2,8 @@ uuid: aa9eb875-4939-4ec6-a634-d92f6eb28330
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - custom_theme
 id: custom_theme_pagetitle
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /todo-app
