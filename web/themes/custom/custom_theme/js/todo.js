@@ -54,11 +54,10 @@
       once('todoDeleteDelegation', '.to-do-list', context).forEach(function (element) {
         $(element).on('click', '.delete-task', function() {
           $(this).closest('.todo-item').remove();
-          Drupal.announce(Drupal.t('Task Deleted'), 'polite');
           saveListState();
         })
       });
-      // --- Add mark and chnage icon on click of checkbox icon.
+      // --- Add mark and change icon on click of checkbox icon.
       once('task-check', '.to-do-list', context).forEach(function(element) {
         $(element).on('click', '.checkbox', function() {
           let $li = $(this).closest('.todo-item');
@@ -66,11 +65,9 @@
           let $icon = $(this).find('i');
           if($li.hasClass('is-complete')) {
             $icon.removeClass('fa-square').addClass('fa-square-check');
-            Drupal.announce(Drupal.t('Task Mark Completed'), 'polite');
           }
           else {
             $icon.removeClass('fa-square-check').addClass('fa-square');
-            Drupal.announce(Drupal.t('Task Mark incompleted'), 'polite');
           }
           saveListState();
         })

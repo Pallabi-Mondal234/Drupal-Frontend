@@ -12,6 +12,7 @@ global:
     - core/jquery
     - core/drupal
     - core/once
+  version: 1.0.1
 
 blog:
   css:
