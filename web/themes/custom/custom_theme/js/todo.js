@@ -30,6 +30,18 @@
           }
         });
       });
+      $taskInput.on('keydown', function(event) {
+          // Check if the key pressed is the 'Enter' key (keyCode 13 or event.key === 'Enter')
+          if (event.key === 'Enter' || event.keyCode === 13) {
+            // Prevent the default behavior (e.g., preventing a page reload if it's in a form)
+            event.preventDefault(); 
+            
+            // Trigger the click event of the 'Add' button
+            if (!($button.is(':disabled'))) {
+                $button.trigger('click');
+            }
+          }
+        });
       // --- Onclick button add task in li.
       once('todoTask', '.add-button', context).forEach(function (element) {
         $(element).on('click', function () {
