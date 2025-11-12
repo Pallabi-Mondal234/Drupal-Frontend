@@ -1,0 +1,30 @@
+uuid: a54b111e-5114-441e-a891-8caf49fef754
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:484886c2-1749-4616-baf5-8fd60158ae5a'
+  module:
+    - block_content
+    - system
+  theme:
+    - custom_theme
+id: custom_theme_todolist
+theme: custom_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:484886c2-1749-4616-baf5-8fd60158ae5a'
+settings:
+  id: 'block_content:484886c2-1749-4616-baf5-8fd60158ae5a'
+  label: 'To Do List'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /todo-app

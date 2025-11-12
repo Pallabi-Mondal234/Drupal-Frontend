@@ -1,0 +1,37 @@
+.region-nav-additional {
+  display: flex;
+}
+.menu,
+.navbar-nav {
+
+  &__link,
+  .nav-link {
+    color: #ffff;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: #f08c0a;
+    }
+  }
+}
+
+.menu_level-1 {
+  position: relative;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .menu_level-2 {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ccc;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover .menu_level-2 {
+    display: block;
+    opacity: 1;
+  }
+}

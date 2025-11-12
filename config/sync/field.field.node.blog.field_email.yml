@@ -1,0 +1,19 @@
+uuid: 3a68a990-4e44-45b4-8b1b-dcf3ddf4ed26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.blog
+id: node.blog.field_email
+field_name: field_email
+entity_type: node
+bundle: blog
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

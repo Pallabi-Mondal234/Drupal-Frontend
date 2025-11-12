@@ -1,0 +1,23 @@
+uuid: 6454c7ed-0484-4e2d-b375-a921170ae40e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.blog
+id: node.blog.field_number
+field_name: field_number
+entity_type: node
+bundle: blog
+label: Number
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
