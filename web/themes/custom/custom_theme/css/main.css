@@ -16,6 +16,10 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
+.p {
+  color: red;
+}
+
 footer {
   background-color: rgb(180, 180, 180);
 }
@@ -62,4 +66,12 @@ header {
 .menu_level-1:hover .menu_level-2 {
   display: block;
   opacity: 1;
+}
+
+.dynamic-color {
+  color: var(--dynamic-text-color);
+}
+
+.h2 {
+  color: red;
 }/*# sourceMappingURL=main.css.map */
