@@ -1,0 +1,129 @@
+#to-do-container {
+  margin: 2rem auto;
+  max-width: 600px;
+  background-color: #32618a;
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #0d023f, #136aa4a8);
+  box-shadow: 0px 5px 16px rgb(0 0 0 / 26%);
+
+  h2 {
+    color: #ffff;
+    position: relative;
+
+    &::after {
+      content: "\f46d";
+      position: absolute;
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-left: 15px;
+      color: #0bcfd3;
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    #new-task-id {
+      padding: 1rem;
+      border-radius: 20px;
+      width: 100%;
+      border: none;
+      padding-right: 9rem;
+    }
+
+    .add-button {
+      position: absolute;
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      right: 0;
+      background-color: #FFC400;
+      border: none;
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+      &:hover {
+        background-color: #be0030;
+      }
+    }
+  }
+
+  .to-do-list {
+    margin: 1rem;
+    overflow-y: auto;
+    max-height: 400px;
+    padding-right: 1rem;
+    padding-left: 0;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #ffffff;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00ff9d, #729b03);
+      border-radius: 10px;
+    }
+
+    .todo-item {
+      padding: 1rem 0rem;
+      border-bottom: 1px solid #ffff;
+      position: relative;
+      font-size: 1.5rem;
+      color: #ffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      .task-text {
+        width: 84%;
+        word-wrap: break-word;
+        line-height: 1.1;
+      }
+
+      &.is-complete {
+        .task-text {
+          text-decoration: line-through;
+          color: #D3D3D3;
+        }
+
+        .checkbox {
+          color: #FFD700;
+        }
+      }
+
+      .checkbox {
+        cursor: pointer;
+
+      }
+
+      .delete-task {
+        color: #ff0033;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+  #to-do-container {
+    padding: 1rem;
+  }
+  .todo-item {
+    gap: 5px!important;
+  }
+  .task-text,
+  .checkbox,
+  .delete-task {
+    font-size: 1rem;
+  }
+}

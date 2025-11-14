@@ -3,3 +3,23 @@ global:
   css:
     theme:
       css/main.css: { }
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css:
+        type: external
+        minified: true
+  js:
+    js/todo.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+  version: 1.0.1
+
+blog:
+  css:
+    theme:
+      css/blog.css: { }
+
+todo:
+  css:
+    theme:
+      css/todo.css: { }

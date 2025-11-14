@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * Implements hook_preprocess_html().
+ * Add class in body for /custom-render.
+ * 
+ * @param array $variables
+ *   An array of variables which include rendered node information.
+ */
+function custom_theme_preprocess_html(array &$variables) {
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath(\Drupal::service('path.current')->getPath());
+  if ($alias === '/custom-render') {
+    $variables['attributes']['class'][] = 'custom-render';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ * Suggest our custom template for the /custom-render page.
+ * 
+ * @param array $suggestions
+ *    An array of theme suggestions.
+ * @param array $variables
+ *    An array of variables which include rendered node information.
+ */
+function custom_theme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath(\Drupal::service('path.current')->getPath());
+  if ($alias === '/custom-render') {
+    $suggestions[] = 'node__custom_render';
+  }
+}
+
+/**
+ * Implements hook_preprocess_custom_render().
+ * Passes color and Basic Page content to twig.
+ * 
+ * @param array $variables
+ *    An array of variables which include rendered node information.
+ */
+function custom_theme_preprocess_node(array &$variables) {
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath(\Drupal::service('path.current')->getPath());
+  if ($alias === '/custom-render') {
+    $variables['color'] = 'purple';
+  }
+}

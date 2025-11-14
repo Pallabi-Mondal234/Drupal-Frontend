@@ -1,4 +1,4 @@
-uuid: a61cbc0d-ab80-4046-adcb-0a8183be49af
+uuid: b09d99c4-a967-428f-8cbe-c514532f421b
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
     - custom_theme
 id: custom_theme_copyrightsection
 theme: custom_theme
-region: footer_bottom
+region: footer
 weight: 0
 provider: null
 plugin: 'block_content:ee835faf-c78a-4a72-ae4b-8072caabb7ae'
