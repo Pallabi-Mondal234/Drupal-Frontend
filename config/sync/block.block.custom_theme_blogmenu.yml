@@ -1,0 +1,25 @@
+uuid: ce27d6fa-af6a-4767-a2b3-40d7f743f0ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.blog-menu
+  module:
+    - system
+  theme:
+    - custom_theme
+id: custom_theme_blogmenu
+theme: custom_theme
+region: nav_additional
+weight: 0
+provider: null
+plugin: 'system_menu_block:blog-menu'
+settings:
+  id: 'system_menu_block:blog-menu'
+  label: 'Blog Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

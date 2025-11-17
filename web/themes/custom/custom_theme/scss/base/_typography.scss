@@ -1,3 +1,9 @@
+@use '../abstract/index' as var;
+
 body {
   font-family: 'Times New Roman', Times, serif;
+}
+
+.custom-render {
+  background: linear-gradient(to bottom left, #{var.$bg-blue} 50%, #{var.$bg-light-blue} 50%);
 }
